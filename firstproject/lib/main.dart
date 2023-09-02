@@ -37,7 +37,44 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: OutlinedButton(
+      body: Container(
+        height: 300,
+        width: 300,
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+         //   crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text("R1"),
+              Text("R2"),
+              Text("R3"),
+              Text("R4"),
+              Text("R5"),
+            ],
+          ),
+          Text("C1"),
+          Text("C2"),
+          Text("C3"),
+          Text("C4"),
+          Text("C5"),
+
+        ],
+
+       )
+      )
+
+      /*Center(
+        child: Container(
+          width: 100,
+          height: 100,
+          child: Image.asset('assets/images/flutter.jpg') ,
+        )
+      )*/
+
+      /*OutlinedButton(
         child: Text("Outlined button"),
         onPressed: (){
           print("outlined button pressed");
@@ -45,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onLongPress: (){
           print('long button pressed');
         },
-      )
+      )*/
 
       /*ElevatedButton(
               child: Text("Eleveted button"),
