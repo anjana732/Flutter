@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
+  var name = ['Ram','sita','Sikha','sandy','sandhaya','shaily','sonu','monu','golu'];
   @override
   Widget build(BuildContext context) {
 
@@ -37,7 +37,33 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Padding(
+      body: ListView.separated(itemBuilder: (context,index){
+        return(Text(name[index],style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),));
+      },
+        itemCount: name.length,
+        separatorBuilder: (context,index){
+          return Divider(height: 100,thickness: 4,);
+        },
+      )
+      /*ListView.builder(itemBuilder: (context, index){
+        return(Text(name[index],style: TextStyle(fontSize: 25,fontWeight:FontWeight.w500),));
+
+    },
+    itemCount: name.length,
+        itemExtent: 100,
+      )*/
+
+      /* ListView(
+        children: [
+          Text("One",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+          Text("Two",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+          Text("Three",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+          Text("Four",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+          Text("Five",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+          Text("Six",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),)
+        ],
+      )*/
+      /* Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -88,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-      )
+      ) */
       /* Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
