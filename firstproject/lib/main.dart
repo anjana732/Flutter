@@ -37,7 +37,77 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Container(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.blue,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.amberAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.deepOrangeAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.lime,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.greenAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.deepPurpleAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.pinkAccent,
+              )
+            ],
+          ),
+        ),
+      )
+      
+      /* Center(
+        child: InkWell(
+          onTap: (){
+            print("Container clicked");
+          },
+          onDoubleTap: (){
+            print("Double tapped container");
+          },
+          child: Container(
+            height: 200,
+            width: 200,
+            color: Colors.amber,
+          ),
+        )
+
+      )*/
+
+      /*Container(
         height: 300,
         width: 300,
         child: Column(
@@ -64,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
 
        )
-      )
+      )*/
 
       /*Center(
         child: Container(
