@@ -40,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
-
-          child: Column(
+          scrollDirection: Axis.horizontal,
+          child: Row(
             children: [
               Container(
                 margin: EdgeInsets.only(bottom: 11),
@@ -89,6 +89,58 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       )
+      /* Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.blue,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.amberAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.deepOrangeAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.lime,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.greenAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.deepPurpleAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                width: 200,
+                height: 200,
+                color: Colors.pinkAccent,
+              )
+            ],
+          ),
+        ),
+      )*/
       
       /* Center(
         child: InkWell(
