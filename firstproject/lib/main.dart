@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var name = ['Ram','sita','Sikha','sandy','sandhaya','shaily','sonu','monu','golu'];
+ // var name = ['Ram','sita','Sikha','sandy','sandhaya','shaily','sonu','monu','golu'];
   @override
   Widget build(BuildContext context) {
 
@@ -37,14 +37,43 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: ListView.separated(itemBuilder: (context,index){
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.blueAccent,
+        child: Center(
+          child: Container(
+            width: 150,
+            height: 150,
+          //  color: Colors.greenAccent,
+            decoration: BoxDecoration(
+              color: Colors.greenAccent,
+            //  borderRadius: BorderRadius.only(topLeft: Radius.circular(21),bottomRight: Radius.circular(21)),
+              border: Border.all(
+                width: 2,
+                color: Colors.black
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 11,
+                  spreadRadius:  7,
+                  color: Colors.black26
+                )
+              ], 
+             shape: BoxShape.circle
+            ),
+          ),
+        ),
+      )
+
+      /* ListView.separated(itemBuilder: (context,index){
         return(Text(name[index],style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),));
       },
         itemCount: name.length,
         separatorBuilder: (context,index){
           return Divider(height: 100,thickness: 4,);
         },
-      )
+      )*/
       /*ListView.builder(itemBuilder: (context, index){
         return(Text(name[index],style: TextStyle(fontSize: 25,fontWeight:FontWeight.w500),));
 
