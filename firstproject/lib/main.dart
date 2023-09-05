@@ -37,7 +37,26 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Row(
+      body:
+
+      //Understanding margin
+      /*Container(
+        color: Colors.blueGrey,
+        margin: EdgeInsets.all(8.0),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('Hello World',style: TextStyle(fontSize: 30),),
+        ),
+      )*/
+
+      //understanding padding
+      /* Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text('Hello world',style: TextStyle(fontSize: 30),),
+      )*/
+
+      //UnderStanding Expanded widget
+      /* Row(
         children: [
             Column(
               children: [
@@ -103,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           )
         ],
-      )
+      )*/
 
       /* Container(
         width: double.infinity,
