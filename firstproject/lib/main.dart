@@ -37,7 +37,75 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Container(
+      body: Row(
+        children: [
+            Column(
+              children: [
+                Expanded(
+                  child: Container(
+                    width: 100,
+                    height: 50,
+                    color: Colors.black26,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: 100,
+                    height: 50,
+                    color: Colors.deepOrangeAccent,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: 100,
+                    height: 50,
+                    color: Colors.lime,
+                  ),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Container(
+                    width: 100,
+                    height: 50,
+                    color: Colors.blueGrey,
+                  ),
+                )
+              ],
+            ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.lightBlueAccent
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.pinkAccent,
+            ),
+          ),
+          Expanded(
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.deepPurpleAccent,
+            ),
+          ),
+          Expanded(
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.greenAccent,
+            ),
+          )
+        ],
+      )
+
+      /* Container(
         width: double.infinity,
         height: double.infinity,
         color: Colors.blueAccent,
@@ -59,12 +127,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   spreadRadius:  7,
                   color: Colors.black26
                 )
-              ], 
+              ],
              shape: BoxShape.circle
             ),
           ),
         ),
-      )
+      )*/
 
       /* ListView.separated(itemBuilder: (context,index){
         return(Text(name[index],style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),));
