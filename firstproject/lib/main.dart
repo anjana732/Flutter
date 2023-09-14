@@ -37,7 +37,15 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Text('Hello World, How are you!')
+      body: Center(
+        child: Card(
+          shadowColor: Colors.deepOrange,
+            elevation: 5,
+            child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('Hello World'),
+        )),
+      )
 
       //Understanding margin
       /*Container(
