@@ -37,7 +37,55 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Center(child: Container(
+          width: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextField(
+                decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(11),
+                    borderSide: BorderSide(
+                      color: Colors.deepOrange,
+                      width: 2
+                    )
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(11),
+                    borderSide: BorderSide(
+                      color: Colors.green,
+                      width: 2
+                    )
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(11),
+                    borderSide: BorderSide(
+                      color: Colors.greenAccent
+                    )
+                  )
+                ),
+              ),
+              Container(
+                height: 15,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                            color: Colors.greenAccent,
+                          width: 2
+                        )
+                    )
+                ),
+              ),
+            ],
+          ))),
+
+
+        //understaing cards
+      /*Center(
         child: Card(
           shadowColor: Colors.deepOrange,
             elevation: 5,
@@ -45,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(8.0),
           child: Text('Hello World'),
         )),
-      )
+      )*/
 
       //Understanding margin
       /*Container(
