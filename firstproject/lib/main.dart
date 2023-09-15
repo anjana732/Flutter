@@ -28,9 +28,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var emailText = TextEditingController();
-  var password = TextEditingController();
+ // var emailText = TextEditingController();
+  //var password = TextEditingController();
  // var name = ['Ram','sita','Sikha','sandy','sandhaya','shaily','sonu','monu','golu'];
+  var time = DateTime.now();
   @override
   Widget build(BuildContext context) {
 
@@ -39,7 +40,20 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(child: Container(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Current Time: $time',style: TextStyle(fontSize: 25),),
+          ElevatedButton(onPressed: (){
+            setState(() {
+
+            });
+          }, child: Text('Current Time'),)
+        ],
+      )
+
+        //understanding Textfields
+      /* Center(child: Container(
           width: 300,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -101,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 print('button clicked');
               }, child: Text('Login'))
             ],
-          ))),
+          ))),*/
 
 
         //understaing cards
