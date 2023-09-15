@@ -28,6 +28,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var emailText = TextEditingController();
+  var password = TextEditingController();
  // var name = ['Ram','sita','Sikha','sandy','sandhaya','shaily','sonu','monu','golu'];
   @override
   Widget build(BuildContext context) {
@@ -43,6 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
+                controller: emailText,
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(11),
@@ -63,14 +67,25 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderSide: BorderSide(
                       color: Colors.greenAccent
                     )
-                  )
+                  ),
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.remove_red_eye,color: Colors.orangeAccent,),
+                    onPressed: (){
+
+                    },
+                  ),
+                  prefixIcon: Icon(Icons.email,color: Colors.orangeAccent,),
                 ),
               ),
               Container(
                 height: 15,
               ),
               TextField(
+                controller: password,
+                obscureText: true,
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
+                  hintText: 'Enter your paasword',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(11),
                         borderSide: BorderSide(
@@ -80,6 +95,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     )
                 ),
               ),
+              ElevatedButton(onPressed: (){
+                String uEmail = emailText.text.toString();
+                String uPass = password.text;
+                print('button clicked');
+              }, child: Text('Login'))
             ],
           ))),
 
