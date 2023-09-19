@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Colors.blue,
   Colors.pinkAccent,
   Colors.tealAccent];
-  var time = DateTime.now();
+//  var time = DateTime.now();
   @override
   Widget build(BuildContext context) {
 
@@ -48,7 +48,31 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body:GridView.count(crossAxisCount: 3,
+      body: GridView.builder(itemBuilder: (context, index){
+        return Container(color: arrcol[index],);
+    }, itemCount: arrcol.length, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,
+      ),)
+
+
+    /* GridView.extent(
+          maxCrossAxisExtent: 100,
+          crossAxisSpacing: 11,
+          mainAxisSpacing: 11,
+        children: [
+          Container(color: arrcol[0]),
+          Container(color: arrcol[1]),
+          Container(color: arrcol[2]),
+          Container(color: arrcol[3]),
+          Container(color: arrcol[4]),
+          Container(color: arrcol[5]),
+          Container(color: arrcol[6]),
+          Container(color: arrcol[7]),
+        ],
+          )*/
+
+      /*GridView.count(crossAxisCount: 4,
+      crossAxisSpacing: 11,
+      mainAxisSpacing: 11,
       children: [
         Container(color: arrcol[0]),
         Container(color: arrcol[1]),
@@ -60,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(color: arrcol[7]),
     ],
 
-      )
+      )*/
 
       //understanding date and time
       /* Column(
