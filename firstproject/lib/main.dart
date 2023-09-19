@@ -31,6 +31,14 @@ class _MyHomePageState extends State<MyHomePage> {
  // var emailText = TextEditingController();
   //var password = TextEditingController();
  // var name = ['Ram','sita','Sikha','sandy','sandhaya','shaily','sonu','monu','golu'];
+  var arrcol =[Colors.green,
+  Colors.orange,
+  Colors.greenAccent,
+  Colors.deepOrangeAccent,
+  Colors.blueGrey,
+  Colors.blue,
+  Colors.pinkAccent,
+  Colors.tealAccent];
   var time = DateTime.now();
   @override
   Widget build(BuildContext context) {
@@ -40,7 +48,22 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Column(
+      body:GridView.count(crossAxisCount: 3,
+      children: [
+        Container(color: arrcol[0]),
+        Container(color: arrcol[1]),
+        Container(color: arrcol[2]),
+        Container(color: arrcol[3]),
+        Container(color: arrcol[4]),
+        Container(color: arrcol[5]),
+        Container(color: arrcol[6]),
+        Container(color: arrcol[7]),
+    ],
+
+      )
+
+      //understanding date and time
+      /* Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Current Time: $time',style: TextStyle(fontSize: 25),),
@@ -50,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
             });
           }, child: Text('Current Time'),)
         ],
-      )
+      )*/
 
         //understanding Textfields
       /* Center(child: Container(
