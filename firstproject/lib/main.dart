@@ -1,3 +1,4 @@
+import 'package:firstproject/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'IntroPage.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orangeAccent),
         useMaterial3: true,
       ),
-      home: IntroPage(),
+      home: SplashScreen(),
        //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
